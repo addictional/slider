@@ -1,11 +1,10 @@
-/* eslint-disable max-len, no-undef, react/no-string-refs, no-param-reassign, max-classes-per-file */
 import '@testing-library/jest-dom';
 import { createEvent, fireEvent, render } from '@testing-library/react';
-import keyCode from 'rc-util/lib/KeyCode';
-import { spyElementPrototypes } from 'rc-util/lib/test/domHook';
-import { resetWarned } from 'rc-util/lib/warning';
 import React from 'react';
 import Slider from '../src';
+import keyCode from '../src/utils/KeyCode';
+import { spyElementPrototypes } from '../src/utils/test/domHook';
+import { resetWarned } from '../src/utils/warning';
 
 describe('Range', () => {
   beforeAll(() => {

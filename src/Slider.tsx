@@ -1,8 +1,4 @@
 import cls from 'classnames';
-import useEvent from 'rc-util/lib/hooks/useEvent';
-import useMergedState from 'rc-util/lib/hooks/useMergedState';
-import isEqual from 'rc-util/lib/isEqual';
-import warning from 'rc-util/lib/warning';
 import * as React from 'react';
 import type { HandlesProps, HandlesRef } from './Handles';
 import Handles from './Handles';
@@ -13,6 +9,8 @@ import Tracks from './Tracks';
 import type { SliderContextProps } from './context';
 import SliderContext from './context';
 import useDrag from './hooks/useDrag';
+import useEvent from './hooks/useEvent';
+import useMergedState from './hooks/useMergedState';
 import useOffset from './hooks/useOffset';
 import useRange from './hooks/useRange';
 import type {
@@ -22,6 +20,8 @@ import type {
   SliderClassNames,
   SliderStyles,
 } from './interface';
+import isEqual from './utils/isEqual';
+import warning from './utils/warning';
 
 /**
  * New:

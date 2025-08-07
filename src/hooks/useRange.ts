@@ -1,6 +1,6 @@
-import { warning } from 'rc-util/lib/warning';
 import { useMemo } from 'react';
 import type { SliderProps } from '../Slider';
+import { warning } from '../utils/warning';
 
 export default function useRange(
   range?: SliderProps['range'],

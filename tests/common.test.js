@@ -1,10 +1,10 @@
 /* eslint-disable max-len, no-undef */
 import '@testing-library/jest-dom';
 import { createEvent, fireEvent, render } from '@testing-library/react';
-import KeyCode from 'rc-util/lib/KeyCode';
-import { spyElementPrototypes } from 'rc-util/lib/test/domHook';
 import React from 'react';
 import Slider from '../src';
+import KeyCode from '../src/utils/KeyCode';
+import { spyElementPrototypes } from '../src/utils/test/domHook';
 
 // const setWidth = (object, width) => {
 //   // https://github.com/tmpvar/jsdom/commit/0cdb2efcc69b6672dc2928644fc0172df5521176

@@ -1,9 +1,9 @@
 /* eslint-disable max-len, no-undef */
 import '@testing-library/jest-dom';
 import { fireEvent, render } from '@testing-library/react';
-import { spyElementPrototypes } from 'rc-util/lib/test/domHook';
 import React from 'react';
 import Slider from '../src';
+import { spyElementPrototypes } from '../src/utils/test/domHook';
 
 describe('marks', () => {
   beforeAll(() => {
@@ -37,7 +37,9 @@ describe('marks', () => {
     const marks = { 0: '0', 30: '30', 100: '100' };
     const onChange = jest.fn();
     const onChangeComplete = jest.fn();
-    const { container } = render(<Slider marks={marks} onChange={onChange} onChangeComplete={onChangeComplete} />);
+    const { container } = render(
+      <Slider marks={marks} onChange={onChange} onChangeComplete={onChangeComplete} />,
+    );
     fireEvent.click(container.getElementsByClassName('rc-slider-mark-text')[1]);
     expect(container.getElementsByClassName('rc-slider-handle')[0]).toHaveAttribute(
       'aria-valuenow',

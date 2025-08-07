@@ -37,6 +37,10 @@ export default () => {
           onChangeComplete={(v) => {
             console.log('AfterChange:', v);
           }}
+          disabled={disabled}
+          range={range}
+          reverse={reverse}
+          vertical={vertical}
           min={0}
           max={1}
           defaultValue={0.81}

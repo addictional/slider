@@ -1,7 +1,7 @@
 /*
-  用于 dumi 改造使用，
-  可用于将 examples 的文件批量修改为 demo 引入形式，
-  其他项目根据具体情况使用。
+  Used for dumi transformation,
+  Can be used to batch modify examples files to demo import form,
+  Other projects should be used according to specific situations.
 */
 
 const fs = require('fs');
@@ -23,7 +23,7 @@ paths.forEach(path => {
         console.log(error);
         return false;
       }
-      console.log(`${name} 更新成功~`);
+      console.log(`${name} updated successfully~`);
     }
   )
 });

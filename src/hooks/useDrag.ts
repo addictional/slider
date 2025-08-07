@@ -1,8 +1,8 @@
 import * as React from 'react';
-import useEvent from 'rc-util/lib/hooks/useEvent';
-import useLayoutEffect from 'rc-util/lib/hooks/useLayoutEffect';
 import { UnstableContext } from '../context';
 import type { Direction, OnStartMove } from '../interface';
+import useEvent from './useEvent';
+import useLayoutEffect from './useLayoutEffect';
 import type { OffsetValues } from './useOffset';
 
 /** Drag to delete offset. It's a user experience number for dragging out */
@@ -124,7 +124,7 @@ function useDrag(
   const onStartMove: OnStartMove = (e, valueIndex, startValues?: number[]) => {
     e.stopPropagation();
 
-    // 如果是点击 track 触发的，需要传入变化后的初始值，而不能直接用 rawValues
+    // If triggered by clicking the track, need to pass in the changed initial values, not directly use rawValues
     const initialValues = startValues || rawValues;
     const originValue = initialValues[valueIndex];
 

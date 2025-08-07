@@ -1,9 +1,9 @@
 import cls from 'classnames';
-import KeyCode from 'rc-util/lib/KeyCode';
 import * as React from 'react';
 import SliderContext from '../context';
 import type { OnStartMove } from '../interface';
 import { getDirectionStyle, getIndex } from '../util';
+import KeyCode from '../utils/KeyCode';
 
 interface RenderProps {
   index: number;
